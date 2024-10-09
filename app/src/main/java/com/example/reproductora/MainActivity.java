@@ -51,8 +51,10 @@ public class MainActivity extends AppCompatActivity {
     public void PlayPause(View view){
         if (vectormp[posicion].isPlaying()){
             vectormp[posicion].pause();
+            Toast.makeText(this,"Pausar", Toast.LENGTH_SHORT).show();
         } else {
          vectormp[posicion].start();
+            Toast.makeText(this,"Reproduciendo", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -65,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
             vectormp [1] = MediaPlayer.create(this, R.raw.sound);
             vectormp [2] = MediaPlayer.create(this, R.raw.tea);
             posicion=0;
+            Toast.makeText(this,"Detener", Toast.LENGTH_SHORT).show();
     }
 
     }
